@@ -7,12 +7,14 @@ import (
 	"net/http"
 )
 
+// Article represents an object of an article
 type Article struct {
-	Title   string `json:"Title"`
-	Desc    string `json:"desc"`
-	Content string `json:"content"`
+	Title   string `json:"Title"`   // title
+	Desc    string `json:"desc"`    // description
+	Content string `json:"content"` // content
 }
 
+// Articles represents a list of articles of type Article
 type Articles []Article
 
 func allArticles(w http.ResponseWriter, r *http.Request) {
